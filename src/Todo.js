@@ -1,14 +1,16 @@
 import React from 'react'
+import './style.css';
 
-const Todo = ( { todo, toggleTodo }) => {
+const Todo = ( { todo, toggleTodo, type }) => {
 
   function handleTodoClick() { 
     toggleTodo(todo.id)
   }
 
   return (
-    <div>
-        <input type="checkbox" checked={todo.complete} onChange={handleTodoClick} />
+    <div className='list'>
+      
+        <input className="input-checkbox" type={type} checked={todo.complete} onChange={handleTodoClick} />
         {todo.name}
     </div>
   )

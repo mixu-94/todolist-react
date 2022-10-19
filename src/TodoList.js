@@ -1,15 +1,13 @@
-import React from 'react'
-import Todo from './Todo'
+/** @format */
+
+import React from "react";
+import Todo from "./Todo";
+import "./style.css";
 
 const TodoList = ({ todos, toggleTodo }) => {
-  return (
-    todos.map(todo => {
+  return todos.map((todo) => {
+    return <Todo type="checkbox" key={todo.id} toggleTodo={toggleTodo} todo={todo} />;
+  });
+};
 
-        return <Todo key={todo.id} toggleTodo={toggleTodo} todo={todo} />
-
-        }
-     )
-  )
-}
-
-export default TodoList
+export default TodoList;
